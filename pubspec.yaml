@@ -21,6 +21,9 @@ flutter:
     - family: Fraunces
       fonts:
         - asset: packages/yuca_pulso/typography/fonts/Fraunces-Black.otf
+          weight: 900
+        - asset: packages/yuca_pulso/typography/fonts/Fraunces-Regular.ttf
+          weight: 400
     - family: Montserrat
       fonts:
         - asset: packages/yuca_pulso/typography/fonts/Montserrat-Italic.ttf
