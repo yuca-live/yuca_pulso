@@ -17,7 +17,11 @@ dev_dependencies:
   flutter_lints: ^1.0.0
 
 flutter:
+  uses-material-design: true
   fonts:
+    - family: YucaIcons
+      fonts:
+        - asset: packages/yuca_pulso/typography/fonts/YucaIcons.ttf
     - family: Fraunces
       fonts:
         - asset: packages/yuca_pulso/typography/fonts/Fraunces-Black.otf
