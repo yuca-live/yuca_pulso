@@ -39,11 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Center(
               child: Text(
-                'dddddd',
-                style: YucaTypography.create(YucaTextStyles.H0, color: YucaColorStyles.brandPrimaryDark),
+                'Design System Yuca',
+                style: YucaTypography.create(YucaTextStyles.H4, color: YucaColorStyles.brandPrimaryDark),
               ),
             ),
-            const Icon(YucaIcons.access)
+            const Icon(
+              YucaIcons.yuca,
+              size: 60,
+            )
           ],
         ),
       ),
