@@ -33,9 +33,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: Text(
-          'data',
-          style: YucaTypography.create(YucaTextStyles.BODY_LARGE_BOLD, color: YucaColorStyles.brandPrimaryDark),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Center(
+              child: Text(
+                'dddddd',
+                style: YucaTypography.create(YucaTextStyles.H0, color: YucaColorStyles.brandPrimaryDark),
+              ),
+            ),
+            const Icon(YucaIcons.access)
+          ],
         ),
       ),
     );
