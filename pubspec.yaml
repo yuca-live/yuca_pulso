@@ -1,7 +1,8 @@
 name: yuca_pulso
 description: Library containing the specifications of Pulso, Yuca design system
-version: 0.0.1
-publish_to: none
+version: 1.0.0
+repository: https://github.com/yuca-live/yuca_pulso
+
 
 environment:
   sdk: ">=2.15.1 <3.0.0"
