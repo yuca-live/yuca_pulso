@@ -1,5 +1,7 @@
-// ignore_for_file: constant_identifier_names
+/// All the default TextStyle possibilities defined by the Design System
+library yuca_pulso;
 
+// ignore_for_file: constant_identifier_names
 enum YucaTextStyles {
   H0,
   H1,
