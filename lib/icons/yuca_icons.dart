@@ -1,5 +1,8 @@
-// ignore_for_file: constant_identifier_names
+/// The IconData Colletion with the `YucaIcons`
 
+library yuca_pulso;
+
+// ignore_for_file: constant_identifier_names
 import 'package:flutter/widgets.dart';
 import 'package:yuca_pulso/icons/yuca_icon_data.dart';
 
@@ -137,7 +140,8 @@ class YucaIcons {
   static const IconData price = YucaIconsData(0xe987);
   static const IconData profile = YucaIconsData(0xe988);
   static const IconData refresh = YucaIconsData(0xe989);
-  static const IconData remove_circle_outline_black_24dp_1 = YucaIconsData(0xe98a);
+  static const IconData remove_circle_outline_black_24dp_1 =
+      YucaIconsData(0xe98a);
   static const IconData remove = YucaIconsData(0xe98b);
   static const IconData schedule = YucaIconsData(0xe98c);
   static const IconData search = YucaIconsData(0xe98d);
