@@ -1,7 +1,9 @@
 /// A space token spacing factory to creates all the Design System's listed Spacing values.
-/// The list could be [SizedBox], a basic set of [EdgeInsets] or the [double] "pure" value.
-/// We set the class into the abstract mode to prevent the user creates an instance without value,
-/// but keeping the support to be extended in the future.
+///
+/// The proposal is to create Spacing Tokens and segment them into three structures:
+///  * The "pure" `double` value, used to the below structures and for custom spacing;
+///  * The `SizedBox` structure values, used to create space between widgets;
+///  * The `EdgeInsets` structure values, used to create *padding* and *margin* values. In this case, only the [EdgeInsets.all] and the [EdgeInsets.symmetric] is available.
 
 library yuca_pulso;
 
@@ -23,6 +25,8 @@ class YucaSpacingToken {
 
 /// All the supported values to be used for create space between the widgets
 /// into [Height] and [Width]
+/// We set the class into the abstract mode to prevent the user creates an instance without value,
+/// but keeping the support to be extended in the future.
 abstract class YucaSpacingSize extends SizedBox {
   /// Returns a [SizedBox] with a `extra small` height
   const YucaSpacingSize.heightExtraSmall({Key? key})
@@ -66,7 +70,9 @@ abstract class YucaSpacingSize extends SizedBox {
 }
 
 /// All the supported values to be used for create [EdgeInsets] for the widgets
-/// Only the `symmetric` and `all` methods is covered
+/// Only the [EdgeInsets.symmetric] and [EdgeInsets.all] methods is covered
+/// We set the class into the abstract mode to prevent the user creates an instance without value,
+/// but keeping the support to be extended in the future.
 abstract class YucaSpacingEdgeInsets extends EdgeInsets {
   /// Returns a [EdgeInsets.all] with a all the `extra small` values
   const YucaSpacingEdgeInsets.allExtraSmall()
