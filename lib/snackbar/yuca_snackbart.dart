@@ -1,7 +1,8 @@
 import 'package:another_flushbar/flushbar.dart';
 import 'package:another_flushbar/flushbar_route.dart';
 import 'package:flutter/material.dart';
-import 'package:yuca_pulso/yuca_pulso.dart';
+
+import '../yuca_pulso.dart';
 
 extension SnackbarExtension on BuildContext {
   void showDefault(
@@ -23,7 +24,9 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.base0,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(YucaTextStyles.BODY_SMALL_REGULAR, color: YucaColorStyles.base100),
+                  style: YucaTypography.create(
+                      YucaTextStyles.BODY_SMALL_REGULAR,
+                      color: YucaColorStyles.base100),
                 ),
                 icon: Padding(
                   padding: const EdgeInsets.only(left: 20),
@@ -68,7 +71,9 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.base100,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(YucaTextStyles.BODY_SMALL_REGULAR, color: YucaColorStyles.base0),
+                  style: YucaTypography.create(
+                      YucaTextStyles.BODY_SMALL_REGULAR,
+                      color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
                   padding: const EdgeInsets.only(left: 20),
@@ -113,7 +118,9 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.brandPrimaryMedium,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(YucaTextStyles.BODY_SMALL_REGULAR, color: YucaColorStyles.base0),
+                  style: YucaTypography.create(
+                      YucaTextStyles.BODY_SMALL_REGULAR,
+                      color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
                   padding: const EdgeInsets.only(left: 20),
@@ -159,7 +166,9 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.statusError,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(YucaTextStyles.BODY_SMALL_REGULAR, color: YucaColorStyles.base0),
+                  style: YucaTypography.create(
+                      YucaTextStyles.BODY_SMALL_REGULAR,
+                      color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
                   padding: const EdgeInsets.only(left: 20),

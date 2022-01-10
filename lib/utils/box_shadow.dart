@@ -5,7 +5,8 @@
 library yuca_pulso;
 
 import 'package:flutter/material.dart';
-import 'package:yuca_pulso/colors/color_styles.dart';
+
+import '../colors/color_styles.dart';
 
 /// The [BoxShadow] factory creates all the shadows in the [Down] direction.
 /// We don't use the `factory` keyword to maintain the constructors with the constant properties.
