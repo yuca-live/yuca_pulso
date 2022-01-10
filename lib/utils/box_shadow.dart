@@ -10,9 +10,8 @@ import '../colors/color_styles.dart';
 
 /// The [BoxShadow] factory creates all the shadows in the [Down] direction.
 /// We don't use the `factory` keyword to maintain the constructors with the constant properties.
-/// The abstract class prevents the user from creating an instance without value,
-/// and we keep the option to be extended by another class in the future.
-abstract class YucaBoxShadowDown extends BoxShadow {
+
+class YucaBoxShadowDown extends BoxShadow {
   /// Creates a [BoxShadow] object with the first shadow elevation level.
   const YucaBoxShadowDown.level1()
       : super(

@@ -1,12 +1,10 @@
 /// A [BorderRadius] factory to creates all the Design System's listed BorderRadius values.
-/// We set the class into the abstract mode to prevent the user creates an instance without value,
-/// but keeping the support to be extended in the future.
 
 library yuca_pulso;
 
 import 'package:flutter/material.dart';
 
-abstract class YucaBorderRadius extends BorderRadius {
+class YucaBorderRadius extends BorderRadius {
   /// Returns a [BorderRadius] with the `small` size
   const YucaBorderRadius.small() : super.all(const Radius.circular(4));
 
