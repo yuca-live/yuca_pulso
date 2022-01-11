@@ -4,7 +4,8 @@ library yuca_pulso;
 
 // ignore_for_file: constant_identifier_names
 import 'package:flutter/widgets.dart';
-import 'package:yuca_pulso/icons/yuca_icon_data.dart';
+
+import 'yuca_icon_data.dart';
 
 @immutable
 class YucaIcons {

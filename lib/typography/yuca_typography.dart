@@ -62,7 +62,7 @@ class YucaTypography {
   /// params: `YucaTextStyles` baseStyle
   static BaseStyleData _createBaseStyleData(YucaTextStyles baseStyle) {
     switch (baseStyle) {
-      case YucaTextStyles.H0:
+      case YucaTextStyles.headingZero:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.fraunces,
           fontSize: 48,
@@ -70,7 +70,7 @@ class YucaTypography {
           initialHeight: 60,
         );
 
-      case YucaTextStyles.H1:
+      case YucaTextStyles.headingOne:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.fraunces,
           fontSize: 36,
@@ -78,7 +78,7 @@ class YucaTypography {
           initialHeight: 48,
         );
 
-      case YucaTextStyles.H2:
+      case YucaTextStyles.headingTwo:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.fraunces,
           fontSize: 24,
@@ -86,7 +86,7 @@ class YucaTypography {
           initialHeight: 32,
         );
 
-      case YucaTextStyles.H3:
+      case YucaTextStyles.headingThree:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.fraunces,
           fontSize: 20,
@@ -94,7 +94,7 @@ class YucaTypography {
           initialHeight: 28,
         );
 
-      case YucaTextStyles.H4:
+      case YucaTextStyles.headingFour:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 16,
@@ -102,7 +102,7 @@ class YucaTypography {
           initialHeight: 25,
         );
 
-      case YucaTextStyles.H5:
+      case YucaTextStyles.headingFive:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 14,
@@ -110,7 +110,7 @@ class YucaTypography {
           initialHeight: 20,
         );
 
-      case YucaTextStyles.BODY_LARGE_BOLD:
+      case YucaTextStyles.bodyLargeBold:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 20,
@@ -118,7 +118,7 @@ class YucaTypography {
           initialHeight: 30,
         );
 
-      case YucaTextStyles.BODY_LARGE_REGULAR:
+      case YucaTextStyles.bodyLargeRegular:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 20,
@@ -126,7 +126,7 @@ class YucaTypography {
           initialHeight: 30,
         );
 
-      case YucaTextStyles.BODY_MEDIUM_BOLD:
+      case YucaTextStyles.bodyMediumBold:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 16,
@@ -134,15 +134,15 @@ class YucaTypography {
           initialHeight: 24,
         );
 
-      case YucaTextStyles.BODY_MEDIUM_REGULAR:
+      case YucaTextStyles.bodyMediumRegular:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 16,
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w400,
           initialHeight: 24,
         );
 
-      case YucaTextStyles.BODY_SMALL_BOLD:
+      case YucaTextStyles.bodySmallBold:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 14,
@@ -150,7 +150,7 @@ class YucaTypography {
           initialHeight: 20,
         );
 
-      case YucaTextStyles.BODY_SMALL_REGULAR:
+      case YucaTextStyles.bodySmallRegular:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 14,
@@ -158,7 +158,7 @@ class YucaTypography {
           initialHeight: 20,
         );
 
-      case YucaTextStyles.PLACEHOLDER_SMALL:
+      case YucaTextStyles.placeholdSmall:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 14,
@@ -166,7 +166,7 @@ class YucaTypography {
           initialHeight: 20,
         );
 
-      case YucaTextStyles.CTA_BOLD:
+      case YucaTextStyles.callToActionBold:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 12,
@@ -174,7 +174,7 @@ class YucaTypography {
           initialHeight: 12,
         );
 
-      case YucaTextStyles.CTA_SEMI:
+      case YucaTextStyles.callToActionSemi:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 12,
@@ -182,7 +182,7 @@ class YucaTypography {
           initialHeight: 12,
         );
 
-      case YucaTextStyles.CAPTION:
+      case YucaTextStyles.caption:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 12,
@@ -190,20 +190,12 @@ class YucaTypography {
           initialHeight: 18,
         );
 
-      case YucaTextStyles.CAPTION_BOLD:
+      case YucaTextStyles.captionBold:
         return BaseStyleData.fromDynamicHeight(
           fontFamily: YucaFontFamily.montserrat,
           fontSize: 12,
           fontWeight: FontWeight.w500,
           initialHeight: 18,
-        );
-
-      default:
-        return BaseStyleData.fromDynamicHeight(
-          fontFamily: YucaFontFamily.montserrat,
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-          initialHeight: 20,
         );
     }
   }
