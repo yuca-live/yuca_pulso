@@ -24,8 +24,7 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.base0,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(
-                      YucaTextStyles.BODY_SMALL_REGULAR,
+                  style: YucaTypography.create(YucaTextStyles.bodySmallRegular,
                       color: YucaColorStyles.base100),
                 ),
                 icon: Padding(
@@ -71,8 +70,7 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.base100,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(
-                      YucaTextStyles.BODY_SMALL_REGULAR,
+                  style: YucaTypography.create(YucaTextStyles.bodySmallRegular,
                       color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
@@ -118,8 +116,7 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.brandPrimaryMedium,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(
-                      YucaTextStyles.BODY_SMALL_REGULAR,
+                  style: YucaTypography.create(YucaTextStyles.bodySmallRegular,
                       color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
@@ -166,8 +163,7 @@ extension SnackbarExtension on BuildContext {
                 backgroundColor: YucaColorStyles.statusError,
                 messageText: Text(
                   message,
-                  style: YucaTypography.create(
-                      YucaTextStyles.BODY_SMALL_REGULAR,
+                  style: YucaTypography.create(YucaTextStyles.bodySmallRegular,
                       color: YucaColorStyles.base0),
                 ),
                 icon: Padding(
