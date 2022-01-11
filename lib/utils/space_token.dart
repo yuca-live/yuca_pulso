@@ -37,54 +37,54 @@ class YucaSpacingToken {
 
 class YucaSpacingSize extends SizedBox {
   /// Returns a [SizedBox] with a `extra small` height
+  ///
   /// Default value: `10`
-  const YucaSpacingSize.heightExtraSmall({Key? key})
-      : super(height: YucaSpacingToken.extraSmall, key: key);
+  const YucaSpacingSize.heightExtraSmall({Key? key}) : super(height: YucaSpacingToken.extraSmall, key: key);
 
   /// Returns a [SizedBox] with a `small` height
+  ///
   /// Default value: `20`
-  const YucaSpacingSize.heightSmall({Key? key})
-      : super(height: YucaSpacingToken.small, key: key);
+  const YucaSpacingSize.heightSmall({Key? key}) : super(height: YucaSpacingToken.small, key: key);
 
   /// Returns a [SizedBox] with a `medium` height
+  ///
   /// Default value: `30`
-  const YucaSpacingSize.heightMedium({Key? key})
-      : super(height: YucaSpacingToken.medium, key: key);
+  const YucaSpacingSize.heightMedium({Key? key}) : super(height: YucaSpacingToken.medium, key: key);
 
   /// Returns a [SizedBox] with a `large` height
+  ///
   /// Default value: `60`
-  const YucaSpacingSize.heightLarge({Key? key})
-      : super(height: YucaSpacingToken.large, key: key);
+  const YucaSpacingSize.heightLarge({Key? key}) : super(height: YucaSpacingToken.large, key: key);
 
   /// Returns a [SizedBox] with a `extra large` height
+  ///
   /// Default value: `90`
-  const YucaSpacingSize.heightExtraLarge({Key? key})
-      : super(height: YucaSpacingToken.extraLarge, key: key);
+  const YucaSpacingSize.heightExtraLarge({Key? key}) : super(height: YucaSpacingToken.extraLarge, key: key);
 
   /// Returns a [SizedBox] with a `extra small` width
+  ///
   /// Default value: `10`
-  const YucaSpacingSize.widthExtraSmall({Key? key})
-      : super(width: YucaSpacingToken.extraSmall, key: key);
+  const YucaSpacingSize.widthExtraSmall({Key? key}) : super(width: YucaSpacingToken.extraSmall, key: key);
 
   /// Returns a [SizedBox] with a `small` width
+  ///
   /// Default value: `20`
-  const YucaSpacingSize.widthSmall({Key? key})
-      : super(width: YucaSpacingToken.small, key: key);
+  const YucaSpacingSize.widthSmall({Key? key}) : super(width: YucaSpacingToken.small, key: key);
 
   /// Returns a [SizedBox] with a `medium` width
+  ///
   /// Default value: `30`
-  const YucaSpacingSize.widthMedium({Key? key})
-      : super(width: YucaSpacingToken.medium, key: key);
+  const YucaSpacingSize.widthMedium({Key? key}) : super(width: YucaSpacingToken.medium, key: key);
 
   /// Returns a [SizedBox] with a `large` width
+  ///
   /// Default value: `60`
-  const YucaSpacingSize.widthLarge({Key? key})
-      : super(width: YucaSpacingToken.large, key: key);
+  const YucaSpacingSize.widthLarge({Key? key}) : super(width: YucaSpacingToken.large, key: key);
 
   /// Returns a [SizedBox] with a `extra large` width
+  ///
   /// Default value: `90`
-  const YucaSpacingSize.widthExtraLarge({Key? key})
-      : super(width: YucaSpacingToken.extraLarge, key: key);
+  const YucaSpacingSize.widthExtraLarge({Key? key}) : super(width: YucaSpacingToken.extraLarge, key: key);
 }
 
 /// All the supported values to be used for create [EdgeInsets] for the widgets
@@ -92,74 +92,77 @@ class YucaSpacingSize extends SizedBox {
 
 class YucaSpacingEdgeInsets extends EdgeInsets {
   /// Returns a [EdgeInsets.all] with a all the `extra small` values
+  ///
   /// Default value: `10`
-  const YucaSpacingEdgeInsets.allExtraSmall()
-      : super.all(YucaSpacingToken.extraSmall);
+  const YucaSpacingEdgeInsets.allExtraSmall() : super.all(YucaSpacingToken.extraSmall);
 
   /// Returns a [EdgeInsets.all] with a all the `small` values
+  ///
   /// Default value: `20`
   const YucaSpacingEdgeInsets.allSmall() : super.all(YucaSpacingToken.small);
 
   /// Returns a [EdgeInsets.all] with a all the `medium` values
+  ///
   /// Default value: `30`
   const YucaSpacingEdgeInsets.allMedium() : super.all(YucaSpacingToken.medium);
 
   /// Returns a [EdgeInsets.all] with a all the `large` values
+  ///
   /// Default value: `60`
   const YucaSpacingEdgeInsets.allLarge() : super.all(YucaSpacingToken.large);
 
   /// Returns a [EdgeInsets.all] with a all the `extra large` values
+  ///
   /// Default value: `90`
-  const YucaSpacingEdgeInsets.allExtraLarge()
-      : super.all(YucaSpacingToken.extraLarge);
+  const YucaSpacingEdgeInsets.allExtraLarge() : super.all(YucaSpacingToken.extraLarge);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `extra small` values
+  ///
   /// Default value: `10`
-  const YucaSpacingEdgeInsets.verticalExtraSmall()
-      : super.symmetric(vertical: YucaSpacingToken.extraSmall);
+  const YucaSpacingEdgeInsets.verticalExtraSmall() : super.symmetric(vertical: YucaSpacingToken.extraSmall);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `small` values
+  ///
   /// Default value: `20`
-  const YucaSpacingEdgeInsets.verticalSmall()
-      : super.symmetric(vertical: YucaSpacingToken.small);
+  const YucaSpacingEdgeInsets.verticalSmall() : super.symmetric(vertical: YucaSpacingToken.small);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `medium` values
+  ///
   /// Default value: `30`
-  const YucaSpacingEdgeInsets.verticalMedium()
-      : super.symmetric(vertical: YucaSpacingToken.medium);
+  const YucaSpacingEdgeInsets.verticalMedium() : super.symmetric(vertical: YucaSpacingToken.medium);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `large` values
+  ///
   /// Default value: `60`
-  const YucaSpacingEdgeInsets.verticalLarge()
-      : super.symmetric(vertical: YucaSpacingToken.large);
+  const YucaSpacingEdgeInsets.verticalLarge() : super.symmetric(vertical: YucaSpacingToken.large);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `extra large` values
+  ///
   /// Default value: `90`
-  const YucaSpacingEdgeInsets.verticalExtraLarge()
-      : super.symmetric(vertical: YucaSpacingToken.extraLarge);
+  const YucaSpacingEdgeInsets.verticalExtraLarge() : super.symmetric(vertical: YucaSpacingToken.extraLarge);
 
   /// Returns a [EdgeInsets.symmetric] with a vertical the `extra small` values
+  ///
   /// Default value: `10`
-  const YucaSpacingEdgeInsets.horizontalExtraSmall()
-      : super.symmetric(horizontal: YucaSpacingToken.extraSmall);
+  const YucaSpacingEdgeInsets.horizontalExtraSmall() : super.symmetric(horizontal: YucaSpacingToken.extraSmall);
 
   /// Returns a [EdgeInsets.symmetric] with a horizontal the `small` values
+  ///
   /// Default value: `20`
-  const YucaSpacingEdgeInsets.horizontalSmall()
-      : super.symmetric(horizontal: YucaSpacingToken.small);
+  const YucaSpacingEdgeInsets.horizontalSmall() : super.symmetric(horizontal: YucaSpacingToken.small);
 
   /// Returns a [EdgeInsets.symmetric] with a horizontal the `medium` values
+  ///
   /// Default value: `30`
-  const YucaSpacingEdgeInsets.horizontalMedium()
-      : super.symmetric(horizontal: YucaSpacingToken.medium);
+  const YucaSpacingEdgeInsets.horizontalMedium() : super.symmetric(horizontal: YucaSpacingToken.medium);
 
   /// Returns a [EdgeInsets.symmetric] with a horizontal the `large` values
+  ///
   /// Default value: `60`
-  const YucaSpacingEdgeInsets.horizontalLarge()
-      : super.symmetric(horizontal: YucaSpacingToken.large);
+  const YucaSpacingEdgeInsets.horizontalLarge() : super.symmetric(horizontal: YucaSpacingToken.large);
 
   /// Returns a [EdgeInsets.symmetric] with a horizontal the `extra large` values
+  ///
   /// Default value: `90`
-  const YucaSpacingEdgeInsets.horizontalExtraLarge()
-      : super.symmetric(horizontal: YucaSpacingToken.extraLarge);
+  const YucaSpacingEdgeInsets.horizontalExtraLarge() : super.symmetric(horizontal: YucaSpacingToken.extraLarge);
 }
