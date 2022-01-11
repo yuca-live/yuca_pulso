@@ -5,3 +5,4 @@ export './icons/yuca_icons.dart';
 export './snackbar/yuca_snackbart.dart';
 export './typography/typography.dart';
 export './utils/utils.dart';
+export './snackbar/yuca_snackbart.dart';
