@@ -21,7 +21,7 @@ extension SnackbarExtension on BuildContext {
               flushbar: Flushbar(
                 borderRadius: BorderRadius.zero,
                 flushbarPosition: FlushbarPosition.BOTTOM,
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                 backgroundColor: YucaColorStyles.base0,
                 messageText: Text(
                   message,
@@ -73,7 +73,7 @@ extension SnackbarExtension on BuildContext {
               flushbar: Flushbar(
                 borderRadius: BorderRadius.zero,
                 flushbarPosition: FlushbarPosition.BOTTOM,
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                 backgroundColor: YucaColorStyles.base100,
                 messageText: Text(
                   message,
@@ -125,7 +125,7 @@ extension SnackbarExtension on BuildContext {
             flushbar: Flushbar(
               borderRadius: BorderRadius.zero,
               flushbarPosition: FlushbarPosition.BOTTOM,
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
               backgroundColor: YucaColorStyles.brandPrimaryLighten,
               messageText: Text(
                 message,
@@ -180,10 +180,9 @@ extension SnackbarExtension on BuildContext {
           showFlushbar(
               context: this,
               flushbar: Flushbar(
-                margin: const EdgeInsets.all(8),
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.zero,
                 flushbarPosition: FlushbarPosition.BOTTOM,
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
                 backgroundColor: YucaColorStyles.brandSecondaryLighten,
                 messageText: Text(
                   message,
