@@ -2,25 +2,29 @@ import 'package:flutter/material.dart';
 
 import '../yuca_pulso.dart';
 
+enum YucaAlertState { error, info, success, warning }
+
 class YucaAlertMessage {
-  final String? description;
+  final String description;
   final VoidCallback? onTap;
   final String? actionTitle;
   final bool hasAction;
+  final YucaAlertState state;
 
-  YucaAlertMessage({
-    this.description,
+  const YucaAlertMessage({
+    required this.description,
+    required this.state,
     this.onTap,
     this.actionTitle,
     this.hasAction = false,
   });
 
-  error() {
+  Container build() {
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: const YucaSpacingEdgeInsets.allSmall(),
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: YucaColorStyles.statusErrorBase,
+        borderRadius: const YucaBorderRadius.small(),
+        color: _changeBackgroundColor(state),
       ),
       child: Column(
         children: [
@@ -28,34 +32,36 @@ class YucaAlertMessage {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(
+              Icon(
                 YucaIcons.error,
-                color: YucaColorStyles.statusError,
+                color: _changeColor(state),
               ),
-              const SizedBox(width: 20),
+              const YucaSpacingSize.widthSmall(),
               Flexible(
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      description ?? '',
-                      style: YucaTypography.create(YucaTextStyles.caption, color: YucaColorStyles.base80),
+                      description,
+                      style: YucaTypography.create(
+                        YucaTextStyles.caption,
+                        color: YucaColorStyles.base80,
+                      ),
                     ),
-                    const SizedBox(height: 10),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Visibility(
-                          visible: hasAction,
-                          child: GestureDetector(
-                            onTap: onTap,
-                            child: Text(
-                              actionTitle ?? '',
-                              style: YucaTypography.create(
-                                YucaTextStyles.bodySmallBold,
-                                color: YucaColorStyles.statusError,
-                              ),
-                            ),
-                          )),
-                    )
+                    const YucaSpacingSize.heightExtraSmall(),
+                    Visibility(
+                      visible: hasAction,
+                      child: GestureDetector(
+                        onTap: onTap,
+                        child: Text(
+                          actionTitle ?? '',
+                          style: YucaTypography.create(
+                            YucaTextStyles.bodySmallBold,
+                            color: _changeColor(state),
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               )
@@ -66,156 +72,33 @@ class YucaAlertMessage {
     );
   }
 
-  warning() {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: YucaColorStyles.statusAlertBase,
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Icon(
-                YucaIcons.alert_system,
-                color: YucaColorStyles.statusAlert,
-              ),
-              const SizedBox(width: 20),
-              Flexible(
-                child: Column(
-                  children: [
-                    Text(
-                      description ?? '',
-                      style: YucaTypography.create(YucaTextStyles.caption, color: YucaColorStyles.base80),
-                    ),
-                    const SizedBox(height: 10),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Visibility(
-                          visible: hasAction,
-                          child: GestureDetector(
-                            onTap: onTap,
-                            child: Text(
-                              actionTitle ?? '',
-                              style: YucaTypography.create(
-                                YucaTextStyles.bodySmallBold,
-                                color: YucaColorStyles.statusAlert,
-                              ),
-                            ),
-                          )),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
+  Color? _changeColor(YucaAlertState state) {
+    switch (state) {
+      case YucaAlertState.error:
+        return YucaColorStyles.statusError;
+      case YucaAlertState.success:
+        return YucaColorStyles.statusSuccess;
+      case YucaAlertState.info:
+        return YucaColorStyles.statusInfo;
+      case YucaAlertState.warning:
+        return YucaColorStyles.statusAlert;
+      default:
+        return YucaColorStyles.base0;
+    }
   }
 
-  info() {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: YucaColorStyles.statusInfoBase,
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Icon(
-                YucaIcons.info,
-                color: YucaColorStyles.statusInfo,
-              ),
-              const SizedBox(width: 20),
-              Flexible(
-                child: Column(
-                  children: [
-                    Text(
-                      description ?? '',
-                      style: YucaTypography.create(YucaTextStyles.caption, color: YucaColorStyles.base80),
-                    ),
-                    const SizedBox(height: 10),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Visibility(
-                          visible: hasAction,
-                          child: GestureDetector(
-                            onTap: onTap,
-                            child: Text(
-                              actionTitle ?? '',
-                              style: YucaTypography.create(
-                                YucaTextStyles.bodySmallBold,
-                                color: YucaColorStyles.statusInfo,
-                              ),
-                            ),
-                          )),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
-  }
-
-  success() {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(4),
-        color: YucaColorStyles.statusSuccessBase,
-      ),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Icon(
-                YucaIcons.check,
-                color: YucaColorStyles.statusSuccess,
-              ),
-              const SizedBox(width: 20),
-              Flexible(
-                child: Column(
-                  children: [
-                    Text(
-                      description ?? '',
-                      style: YucaTypography.create(YucaTextStyles.caption, color: YucaColorStyles.base80),
-                    ),
-                    const SizedBox(height: 10),
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Visibility(
-                          visible: hasAction,
-                          child: GestureDetector(
-                            onTap: onTap,
-                            child: Text(
-                              actionTitle ?? '',
-                              style: YucaTypography.create(
-                                YucaTextStyles.bodySmallBold,
-                                color: YucaColorStyles.statusSuccess,
-                              ),
-                            ),
-                          )),
-                    )
-                  ],
-                ),
-              )
-            ],
-          ),
-        ],
-      ),
-    );
+  Color? _changeBackgroundColor(YucaAlertState state) {
+    switch (state) {
+      case YucaAlertState.error:
+        return YucaColorStyles.statusErrorBase;
+      case YucaAlertState.success:
+        return YucaColorStyles.statusSuccessBase;
+      case YucaAlertState.info:
+        return YucaColorStyles.statusInfoBase;
+      case YucaAlertState.warning:
+        return YucaColorStyles.statusAlertBase;
+      default:
+        return YucaColorStyles.base0;
+    }
   }
 }
