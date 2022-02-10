@@ -48,18 +48,22 @@ class YucaAlertMessage {
                         color: YucaColorStyles.base80,
                       ),
                     ),
-                    const YucaSpacingSize.heightExtraSmall(),
                     Visibility(
                       visible: hasAction,
-                      child: GestureDetector(
-                        onTap: onTap,
-                        child: Text(
-                          actionTitle ?? '',
-                          style: YucaTypography.create(
-                            YucaTextStyles.bodySmallBold,
-                            color: _changeColor(state),
+                      child: Column(
+                        children: [
+                          const YucaSpacingSize.heightExtraSmall(),
+                          GestureDetector(
+                            onTap: onTap,
+                            child: Text(
+                              actionTitle ?? '',
+                              style: YucaTypography.create(
+                                YucaTextStyles.bodySmallBold,
+                                color: _changeColor(state),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                     ),
                   ],
