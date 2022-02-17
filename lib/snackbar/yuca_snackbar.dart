@@ -126,7 +126,7 @@ extension SnackbarExtension on BuildContext {
               borderRadius: BorderRadius.zero,
               flushbarPosition: FlushbarPosition.BOTTOM,
               padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-              backgroundColor: YucaColorStyles.brandPrimaryLighten,
+              backgroundColor: YucaColorStyles.base0,
               messageText: Text(
                 message,
                 style: YucaTypography.create(
@@ -183,7 +183,7 @@ extension SnackbarExtension on BuildContext {
                 borderRadius: BorderRadius.zero,
                 flushbarPosition: FlushbarPosition.BOTTOM,
                 padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                backgroundColor: YucaColorStyles.brandSecondaryLighten,
+                backgroundColor: YucaColorStyles.base0,
                 messageText: Text(
                   message,
                   style:
