@@ -46,8 +46,7 @@ class YucaAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: _onTapClose,
         ),
       ));
-    }
-    if (withHelpIcon) {
+    } else if (withHelpIcon) {
       actionList.add(GestureDetector(
         onTap: helpOnTap,
         child: Container(
