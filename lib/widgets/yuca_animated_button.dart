@@ -14,7 +14,7 @@ class YucaAnimatedButton extends StatefulWidget {
   final Color? textColor;
 
   final bool enabled;
-  final Color? backgroundColor;
+  final bool isButtonLink;
   final Widget? icon;
   final BorderRadius? borderRadius;
   final MainAxisAlignment? alignContent;
@@ -31,7 +31,7 @@ class YucaAnimatedButton extends StatefulWidget {
     this.buttonColor,
     this.textColor,
     this.enabled = true,
-    this.backgroundColor,
+    this.isButtonLink = false,
     this.icon,
     this.borderRadius,
     this.alignContent,
@@ -99,13 +99,15 @@ class YucaAnimatedButtonState extends State<YucaAnimatedButton> with TickerProvi
               ),
         ),
         primary: widget.isPrimary ? YucaColorStyles.base0 : YucaColorStyles.brandPrimaryDark,
-        backgroundColor: !isEnabled && widget.isPrimary == true
-            ? YucaColorStyles.base20
-            : !isEnabled && widget.isPrimary == false
-                ? YucaColorStyles.base0
-                : widget.isPrimary
-                    ? YucaColorStyles.brandPrimaryDark
-                    : YucaColorStyles.brandPrimaryLighten,
+        backgroundColor: widget.isButtonLink
+            ? Colors.transparent
+            : !isEnabled && widget.isPrimary == true
+                ? YucaColorStyles.base20
+                : !isEnabled && widget.isPrimary == false
+                    ? YucaColorStyles.base0
+                    : widget.isPrimary
+                        ? YucaColorStyles.brandPrimaryDark
+                        : YucaColorStyles.brandPrimaryLighten,
         textStyle: YucaTypography.create(
           YucaTextStyles.bodySmallBold,
           fontWeight: FontWeight.w600,
