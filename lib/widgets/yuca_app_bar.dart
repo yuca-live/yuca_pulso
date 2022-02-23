@@ -13,7 +13,6 @@ class YucaAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? backButtonFunction;
   final VoidCallback? closeButtonFunction;
   final BuildContext context;
-  final dynamic pop;
   final VoidCallback? helpOnTap;
   final bool withHelpIcon;
 
@@ -30,7 +29,6 @@ class YucaAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.closeButtonFunction,
     this.leading,
     required this.context,
-    this.pop,
     this.helpOnTap,
     this.withHelpIcon = false,
   }) : super(key: key);
@@ -87,13 +85,13 @@ class YucaAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
-  void _onTapBack({dynamic pop}) {
+  void _onTapBack() {
     if (backButtonFunction != null) backButtonFunction!();
-    pop;
+    Navigator.of(context).pop();
   }
 
-  void _onTapClose({dynamic pop}) {
+  void _onTapClose() {
     if (closeButtonFunction != null) closeButtonFunction!();
-    pop;
+    Navigator.of(context).pop();
   }
 }
