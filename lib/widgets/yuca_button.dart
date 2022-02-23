@@ -9,7 +9,7 @@ class YucaButton extends StatelessWidget {
   final VoidCallback? action;
   final bool enabled;
   final Color? textColor;
-  final Color? backgroundColor;
+  final bool isButtonLink;
   final Widget? icon;
   final BorderRadius? borderRadius;
   final MainAxisAlignment? alignContent;
@@ -22,7 +22,7 @@ class YucaButton extends StatelessWidget {
     this.action,
     this.enabled = true,
     this.textColor,
-    this.backgroundColor,
+    this.isButtonLink = false,
     this.icon,
     this.borderRadius,
     this.alignContent,
@@ -70,7 +70,7 @@ class YucaButton extends StatelessWidget {
                 ),
           ),
           primary: isPrimary ? YucaColorStyles.base0 : YucaColorStyles.brandPrimaryDark,
-          backgroundColor: !isEnabled && isPrimary == true
+          backgroundColor: isButtonLink ? Colors.transparent : !isEnabled && isPrimary == true
               ? YucaColorStyles.base20
               : !isEnabled && isPrimary == false
                   ? YucaColorStyles.base0
