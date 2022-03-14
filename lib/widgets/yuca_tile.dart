@@ -12,7 +12,6 @@ class YucaTile extends StatelessWidget {
   final Color? iconColor;
   final bool titleIsLabel;
   final bool enableChevron;
-  final Color? backgroundColor;
 
   const YucaTile({
     Key? key,
@@ -25,16 +24,13 @@ class YucaTile extends StatelessWidget {
     this.iconColor = YucaColorStyles.base100,
     this.titleIsLabel = false,
     this.enableChevron = true,
-    this.backgroundColor = YucaColorStyles.base0,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
-      hoverColor: Colors.grey,
       child: Container(
-        color: backgroundColor,
         padding: EdgeInsets.symmetric(horizontal: 32, vertical: icon != null ? 24 : 26),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
