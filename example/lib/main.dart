@@ -1,3 +1,4 @@
+import 'package:example/screens/alert_message.screen.dart';
 import 'package:example/screens/app_bar_scren.dart';
 import 'package:example/screens/snackbar_screen.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
@@ -62,7 +62,9 @@ class MyHomePage extends StatelessWidget {
             ),
             YucaButton(
               text: 'Alert message',
-              action: () {},
+              action: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlertMessageScreen()));
+              },
             ),
             YucaButton(
               text: 'Colors',

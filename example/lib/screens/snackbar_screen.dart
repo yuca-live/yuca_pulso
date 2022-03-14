@@ -17,28 +17,28 @@ class SnackbarScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 50),
             YucaButton(
-              text: 'Show Snackbar Error',
+              text: 'Snackbar Erro',
               action: () {
-                context.showError('message error!');
+                context.showError('messagem de erro!');
               },
             ),
             const SizedBox(height: 20),
             YucaButton(
-              text: 'Show Snackbar Success',
+              text: 'Snackbar Sucesso',
               action: () {
-                context.showSuccess('message success!');
+                context.showSuccess('messagem sucesso!');
               },
             ),
             const SizedBox(height: 20),
             YucaButton(
-              text: 'Show Snackbar Default',
+              text: 'Snackbar Default',
               action: () {
-                context.showDefault('message default!');
+                context.showDefault('messagem default!');
               },
             ),
             const SizedBox(height: 20),
             YucaButton(
-              text: 'Show Snackbar Default Inverted',
+              text: 'Snackbar Default Inverted',
               action: () {
                 context.showDefaultInverted('message default!');
               },
