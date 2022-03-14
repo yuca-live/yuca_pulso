@@ -43,6 +43,7 @@ extension SnackbarExtension on BuildContext {
                 progressIndicatorBackgroundColor: YucaColorStyles.base100,
                 showProgressIndicator: true,
                 progressIndicatorController: controller,
+                progressIndicatorValueColor: const AlwaysStoppedAnimation<Color>(YucaColorStyles.base100),
               )),
         )
         .then(
@@ -95,6 +96,7 @@ extension SnackbarExtension on BuildContext {
                 progressIndicatorBackgroundColor: YucaColorStyles.brandPrimaryDark,
                 showProgressIndicator: true,
                 progressIndicatorController: controller,
+                progressIndicatorValueColor: const AlwaysStoppedAnimation<Color>(YucaColorStyles.brandPrimaryDark),
               )),
         )
         .then(
@@ -150,6 +152,7 @@ extension SnackbarExtension on BuildContext {
               progressIndicatorBackgroundColor: YucaColorStyles.brandPrimaryDark,
               showProgressIndicator: true,
               progressIndicatorController: controller,
+              progressIndicatorValueColor: const AlwaysStoppedAnimation<Color>(YucaColorStyles.brandPrimaryDark),
             ),
           ),
         )
@@ -205,6 +208,7 @@ extension SnackbarExtension on BuildContext {
                 progressIndicatorBackgroundColor: YucaColorStyles.brandSecondaryDark,
                 showProgressIndicator: true,
                 progressIndicatorController: controller,
+                progressIndicatorValueColor: const AlwaysStoppedAnimation<Color>(YucaColorStyles.brandSecondaryDark),
               )),
         )
         .then(
