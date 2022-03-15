@@ -1,5 +1,6 @@
 import 'package:example/screens/alert_message.screen.dart';
 import 'package:example/screens/app_bar_scren.dart';
+import 'package:example/screens/colors_screen.dart';
 import 'package:example/screens/snackbar_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:yuca_pulso/yuca_pulso.dart';
@@ -68,7 +69,9 @@ class MyHomePage extends StatelessWidget {
             ),
             YucaButton(
               text: 'Colors',
-              action: () {},
+              action: () {
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ColorsScreen()));
+              },
             ),
             YucaButton(
               text: 'Typography',
