@@ -37,55 +37,59 @@ class MyHomePage extends StatelessWidget {
         allowBackIcon: false,
       ),
       backgroundColor: YucaColorStyles.base0,
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            YucaButton(
-              text: 'AppBar',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AppBarScreen()));
-              },
+      body: ListView(
+        children: [
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                YucaButton(
+                  text: 'AppBar',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AppBarScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Buttons',
+                  action: () {},
+                ),
+                YucaButton(
+                  text: 'Snackbar/Toast',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SnackbarScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Tiles',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TilesScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Alert message',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlertMessageScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Colors',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ColorsScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Typography',
+                  action: () {},
+                ),
+                YucaButton(
+                  text: 'Divider',
+                  action: () {},
+                ),
+              ],
             ),
-            YucaButton(
-              text: 'Buttons',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Snackbar/Toast',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SnackbarScreen()));
-              },
-            ),
-            YucaButton(
-              text: 'Tiles',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TilesScreen()));
-              },
-            ),
-            YucaButton(
-              text: 'Alert message',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlertMessageScreen()));
-              },
-            ),
-            YucaButton(
-              text: 'Colors',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ColorsScreen()));
-              },
-            ),
-            YucaButton(
-              text: 'Typography',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Divider',
-              action: () {},
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
