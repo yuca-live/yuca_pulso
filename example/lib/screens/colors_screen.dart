@@ -15,7 +15,7 @@ class ColorsScreen extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            margin: const EdgeInsets.symmetric(horizontal: 32),
+            margin: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -39,7 +39,6 @@ class ColorsScreen extends StatelessWidget {
 
   Widget _containerColor({required Color color, required String title}) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
           height: 50,
@@ -56,164 +55,212 @@ class ColorsScreen extends StatelessWidget {
   }
 
   Widget _brandPrimary() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Brand - Primary',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.brandPrimaryDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandPrimaryDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandPrimaryMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandPrimaryLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandPrimaryLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Brand - Primary',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.brandPrimaryDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandPrimaryDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandPrimaryMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandPrimaryLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandPrimaryLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget _brandSecondary() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Brand - Secondary',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.brandSecondaryDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSecondaryDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSecondaryMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSecondaryLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSecondaryLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Brand - Secondary',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.brandSecondaryDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSecondaryDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSecondaryMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSecondaryLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSecondaryLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget _brandSupport() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Brand - Support',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.brandSupportDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSupportDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSupportMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSupportLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.brandSupportLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Brand - Support',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.brandSupportDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSupportDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSupportMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSupportLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.brandSupportLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget _alternativePrimary() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Alternative - Primary',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.alternativePrimaryDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativePrimaryDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativePrimaryMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativePrimaryLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativePrimaryLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Alternative - Primary',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.alternativePrimaryDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativePrimaryDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativePrimaryMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativePrimaryLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativePrimaryLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget _alternativeSecondary() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Alternative - Secondary',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.alternativeSecondaryDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSecondaryDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSecondaryMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSecondaryLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSecondaryLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Alternative - Secondary',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.alternativeSecondaryDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSecondaryDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSecondaryMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSecondaryLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSecondaryLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
   Widget _alternativeSupport() {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text(
-          'Alternative - Support',
-          style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
-        ),
-        const SizedBox(height: 20),
-        Row(
-          children: [
-            _containerColor(color: YucaColorStyles.alternativeSupportDarkest, title: 'Darkest'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSupportDark, title: 'Dark'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSupportMedium, title: 'Medium'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSupportLight, title: 'Light'),
-            const SizedBox(width: 20),
-            _containerColor(color: YucaColorStyles.alternativeSupportLighten, title: 'Lighten'),
-          ],
-        ),
-        const SizedBox(height: 20),
-      ],
+    return SizedBox(
+      height: 145,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Alternative - Support',
+                style: YucaTypography.create(YucaTextStyles.bodyLargeBold),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                children: [
+                  _containerColor(color: YucaColorStyles.alternativeSupportDarkest, title: 'Darkest'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSupportDark, title: 'Dark'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSupportMedium, title: 'Medium'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSupportLight, title: 'Light'),
+                  const SizedBox(width: 20),
+                  _containerColor(color: YucaColorStyles.alternativeSupportLighten, title: 'Lighten'),
+                ],
+              ),
+              const SizedBox(height: 20),
+            ],
+          ),
+        ],
+      ),
     );
   }
 
