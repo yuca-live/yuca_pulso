@@ -1,5 +1,6 @@
 import 'package:example/screens/alert_message.screen.dart';
 import 'package:example/screens/app_bar_scren.dart';
+import 'package:example/screens/buttons_screen.dart';
 import 'package:example/screens/colors_screen.dart';
 import 'package:example/screens/snackbar_screen.dart';
 import 'package:example/screens/tiles_screen.dart';
@@ -52,7 +53,9 @@ class MyHomePage extends StatelessWidget {
                 ),
                 YucaButton(
                   text: 'Buttons',
-                  action: () {},
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ButtonsScreen()));
+                  },
                 ),
                 YucaButton(
                   text: 'Snackbar/Toast',
