@@ -48,6 +48,13 @@ class AppBarScreen extends StatelessWidget {
               allowBackIcon: false,
               withHelpIcon: true,
             ),
+            const SizedBox(height: 20),
+            YucaAppBar(
+              context: context,
+              title: 'Titulo',
+              allowBackIcon: false,
+              withHelpIcon: false,
+            ),
           ],
         ),
       ),

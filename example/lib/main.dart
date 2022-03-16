@@ -1,5 +1,10 @@
+import 'package:example/screens/alert_message.screen.dart';
 import 'package:example/screens/app_bar_scren.dart';
+import 'package:example/screens/buttons_screen.dart';
+import 'package:example/screens/colors_screen.dart';
 import 'package:example/screens/snackbar_screen.dart';
+import 'package:example/screens/tiles_screen.dart';
+import 'package:example/screens/typography_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:yuca_pulso/yuca_pulso.dart';
 
@@ -14,7 +19,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
@@ -35,49 +39,59 @@ class MyHomePage extends StatelessWidget {
         allowBackIcon: false,
       ),
       backgroundColor: YucaColorStyles.base0,
-      body: Container(
-        margin: const EdgeInsets.symmetric(horizontal: 32),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            YucaButton(
-              text: 'AppBar',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AppBarScreen()));
-              },
+      body: ListView(
+        children: [
+          Container(
+            margin: const EdgeInsets.symmetric(horizontal: 32),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                YucaButton(
+                  text: 'AppBar',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AppBarScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Buttons',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ButtonsScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Snackbar/Toast',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SnackbarScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Tiles',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TilesScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Alert message',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlertMessageScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Colors',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ColorsScreen()));
+                  },
+                ),
+                YucaButton(
+                  text: 'Typography',
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TypographyScreen()));
+                  },
+                ),
+              ],
             ),
-            YucaButton(
-              text: 'Buttons',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Snackbar/Toast',
-              action: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SnackbarScreen()));
-              },
-            ),
-            YucaButton(
-              text: 'Tiles',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Alert message',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Colors',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Typography',
-              action: () {},
-            ),
-            YucaButton(
-              text: 'Divider',
-              action: () {},
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
