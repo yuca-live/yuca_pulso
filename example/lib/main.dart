@@ -4,6 +4,7 @@ import 'package:example/screens/buttons_screen.dart';
 import 'package:example/screens/colors_screen.dart';
 import 'package:example/screens/snackbar_screen.dart';
 import 'package:example/screens/tiles_screen.dart';
+import 'package:example/screens/typography_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:yuca_pulso/yuca_pulso.dart';
 
@@ -83,11 +84,9 @@ class MyHomePage extends StatelessWidget {
                 ),
                 YucaButton(
                   text: 'Typography',
-                  action: () {},
-                ),
-                YucaButton(
-                  text: 'Divider',
-                  action: () {},
+                  action: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TypographyScreen()));
+                  },
                 ),
               ],
             ),
