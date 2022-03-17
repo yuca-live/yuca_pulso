@@ -1,10 +1,11 @@
 import 'package:example/screens/alert_message.screen.dart';
-import 'package:example/screens/app_bar_scren.dart';
+import 'package:example/screens/app_bar_screen.dart';
 import 'package:example/screens/buttons_screen.dart';
 import 'package:example/screens/colors_screen.dart';
 import 'package:example/screens/snackbar_screen.dart';
 import 'package:example/screens/tiles_screen.dart';
 import 'package:example/screens/typography_screen.dart';
+import 'package:example/widgets/drawer_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:yuca_pulso/yuca_pulso.dart';
 
@@ -15,12 +16,11 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.lightGreen,
       ),
       home: const MyHomePage(),
     );
@@ -39,54 +39,64 @@ class MyHomePage extends StatelessWidget {
         allowBackIcon: false,
       ),
       backgroundColor: YucaColorStyles.base0,
-      body: ListView(
+      body: Row(
         children: [
+          Drawer(
+            child: ListView(
+              children: [
+                DrawerHeader(
+                  child: Text(
+                    'Design System Yuca',
+                    style: YucaTypography.create(YucaTextStyles.headingTwo),
+                  ),
+                ),
+                const DrawerTile(
+                  text: 'AppBar',
+                  page: AppBarScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Buttons',
+                  page: ButtonsScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Snackbar/Toast',
+                  page: SnackbarScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Tiles',
+                  page: TilesScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Alert message',
+                  page: AlertMessageScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Colors',
+                  page: ColorsScreen(),
+                ),
+                const DrawerTile(
+                  text: 'Typography',
+                  page: TypographyScreen(),
+                ),
+              ],
+            ),
+          ),
           Container(
             margin: const EdgeInsets.symmetric(horizontal: 32),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            width: MediaQuery.of(context).size.aspectRatio * 200,
+            height: MediaQuery.of(context).size.height / 1.5,
+            child: ListView(
               children: [
-                YucaButton(
-                  text: 'AppBar',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AppBarScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Buttons',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ButtonsScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Snackbar/Toast',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const SnackbarScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Tiles',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TilesScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Alert message',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AlertMessageScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Colors',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ColorsScreen()));
-                  },
-                ),
-                YucaButton(
-                  text: 'Typography',
-                  action: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TypographyScreen()));
-                  },
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      'Este site tem o intuito para demonstrar e visualizar o que temos atualmente no design system utilizado no mobile.\n Sendo Assim, todo e qualquer codigo é restrito e de uso apenas da Yuca e seus funcionarios. Caso surgir alguma duvida entre em contato com o time de mobile via slack.',
+                      style: YucaTypography.create(YucaTextStyles.bodyMediumRegular),
+                    ),
+                  ],
                 ),
               ],
             ),
