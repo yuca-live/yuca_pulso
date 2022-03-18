@@ -1,4 +1,4 @@
-import 'package:example/screens/alert_message.screen.dart';
+import 'package:example/screens/alert_message_screen.dart';
 import 'package:example/screens/app_bar_screen.dart';
 import 'package:example/screens/buttons_screen.dart';
 import 'package:example/screens/colors_screen.dart';

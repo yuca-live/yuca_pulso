@@ -17,7 +17,6 @@ class AppBarScreen extends StatelessWidget {
       body: WidgetWithCodeView(
         child: _page(context),
         sourceFilePath: '../lib/screens/app_bar_screen.dart',
-        showLabelText: false,
       ),
     );
   }

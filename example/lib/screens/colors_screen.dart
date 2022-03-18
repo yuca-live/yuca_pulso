@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:widget_with_codeview/widget_with_codeview.dart';
 import 'package:yuca_pulso/yuca_pulso.dart';
 
 class ColorsScreen extends StatelessWidget {
@@ -12,27 +13,30 @@ class ColorsScreen extends StatelessWidget {
         title: 'Colors',
       ),
       backgroundColor: YucaColorStyles.base0,
-      body: ListView(
-        children: [
-          Container(
-            margin: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(height: 20),
-                _brandPrimary(),
-                _brandSecondary(),
-                _brandSupport(),
-                _alternativePrimary(),
-                _alternativeSecondary(),
-                _alternativeSupport(),
-                _base(),
-                _status(),
-                _action(),
-              ],
+      body: WidgetWithCodeView(
+        child: ListView(
+          children: [
+            Container(
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(height: 20),
+                  _brandPrimary(),
+                  _brandSecondary(),
+                  _brandSupport(),
+                  _alternativePrimary(),
+                  _alternativeSecondary(),
+                  _alternativeSupport(),
+                  _base(),
+                  _status(),
+                  _action(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
+        sourceFilePath: '../lib/screens/colors_screen.dart',
       ),
     );
   }
