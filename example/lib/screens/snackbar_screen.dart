@@ -15,7 +15,7 @@ class SnackbarScreen extends StatelessWidget {
         backgroundColor: YucaColorStyles.base0,
         body: WidgetWithCodeView(
           child: _page(context),
-          sourceFilePath: '../lib/screens/snackbar_screen.dart',
+          sourceFilePath: 'lib/screens/snackbar_screen.dart',
         ));
   }
 

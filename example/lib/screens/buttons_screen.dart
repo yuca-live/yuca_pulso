@@ -21,7 +21,7 @@ class _ButtonsScreenState extends State<ButtonsScreen> {
       ),
       body: WidgetWithCodeView(
         child: _page(),
-        sourceFilePath: '../lib/screens/buttons_screen.dart',
+        sourceFilePath: 'lib/screens/buttons_screen.dart',
       ),
     );
   }

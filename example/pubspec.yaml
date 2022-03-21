@@ -26,3 +26,11 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/screens/app_bar_screen.dart
+    - lib/screens/buttons_screen.dart
+    - lib/screens/colors_screen.dart
+    - lib/screens/snackbar_screen.dart
+    - lib/screens/tiles_screen.dart
+    - lib/screens/typography_screen.dart
+    - lib/screens/alert_message_screen.dart

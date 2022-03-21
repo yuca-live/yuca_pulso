@@ -16,7 +16,7 @@ class AppBarScreen extends StatelessWidget {
       backgroundColor: YucaColorStyles.base40,
       body: WidgetWithCodeView(
         child: _page(context),
-        sourceFilePath: '../lib/screens/app_bar_screen.dart',
+        sourceFilePath: 'lib/screens/app_bar_screen.dart',
       ),
     );
   }
