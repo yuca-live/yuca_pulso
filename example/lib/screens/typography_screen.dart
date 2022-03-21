@@ -15,7 +15,7 @@ class TypographyScreen extends StatelessWidget {
         backgroundColor: YucaColorStyles.base0,
         body: WidgetWithCodeView(
           child: _page(),
-          sourceFilePath: '../lib/screens/typography_screen.dart',
+          sourceFilePath: 'lib/screens/typography_screen.dart',
         ));
   }
 

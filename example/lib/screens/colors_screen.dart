@@ -36,7 +36,7 @@ class ColorsScreen extends StatelessWidget {
             ),
           ],
         ),
-        sourceFilePath: '../lib/screens/colors_screen.dart',
+        sourceFilePath: 'lib/screens/colors_screen.dart',
       ),
     );
   }

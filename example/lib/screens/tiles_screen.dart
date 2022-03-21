@@ -15,7 +15,7 @@ class TilesScreen extends StatelessWidget {
         backgroundColor: YucaColorStyles.base0,
         body: WidgetWithCodeView(
           child: _page(),
-          sourceFilePath: '../lib/screens/tiles_screen.dart',
+          sourceFilePath: 'lib/screens/tiles_screen.dart',
         ));
   }
 
