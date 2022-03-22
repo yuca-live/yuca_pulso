@@ -38,9 +38,9 @@ class YucaAlertMessage extends StatelessWidget {
     this.actionTitle,
     this.hasAction = false,
     Key? key,
-  })  : assert(hasAction == true && onTap == null,
+  })  : assert(!hasAction || (hasAction == true && onTap != null),
             'The onTap cannot be null when the alert has an action'),
-        assert(hasAction == true && actionTitle == null,
+        assert(!hasAction || (hasAction == true && actionTitle != null),
             'The actionTitle cannot be null when the alert has an action'),
         super(key: key);
 
