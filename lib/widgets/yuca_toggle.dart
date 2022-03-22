@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
-import 'package:flutter/material.dart';
-import 'package:yuca_pulso/colors/color_styles.dart';
+
+import '../colors/color_styles.dart';
 
 class YucaToggle extends StatelessWidget {
   const YucaToggle({Key? key, this.value, this.onChanged}) : super(key: key);
