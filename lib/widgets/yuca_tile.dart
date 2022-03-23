@@ -31,7 +31,7 @@ class YucaTile extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 32, vertical: icon != null ? 24 : 26),
+        padding: EdgeInsets.symmetric(horizontal: 30, vertical: icon != null ? 24 : 26),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
