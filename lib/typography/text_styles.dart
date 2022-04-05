@@ -120,4 +120,18 @@ enum YucaTextStyles {
   ///
   /// `fontWeight: FontWeight.w500`,
   captionBold,
+
+  /// The `label` style
+  ///
+  /// `fontSize: 10`,
+  ///
+  /// `fontWeight: FontWeight.w400`,
+  label,
+
+  /// The `label` style
+  ///
+  /// `fontSize: 10`,
+  ///
+  /// `fontWeight: FontWeight.w600`,
+  labelSemi,
 }
