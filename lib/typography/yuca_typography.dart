@@ -197,6 +197,20 @@ class YucaTypography {
           fontWeight: FontWeight.w500,
           initialHeight: 18,
         );
+      case YucaTextStyles.label:
+        return BaseStyleData.fromDynamicHeight(
+          fontFamily: YucaFontFamily.montserrat,
+          fontWeight: FontWeight.w400,
+          initialHeight: 16,
+          fontSize: 10,
+        );
+      case YucaTextStyles.labelSemi:
+        return BaseStyleData.fromDynamicHeight(
+          fontFamily: YucaFontFamily.montserrat,
+          fontWeight: FontWeight.w600,
+          initialHeight: 16,
+          fontSize: 10,
+        );
     }
   }
 }
