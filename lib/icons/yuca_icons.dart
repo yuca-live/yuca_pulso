@@ -11,11 +11,11 @@ import 'package:yuca_pulso/icons/yuca_icon_data.dart';
 class YucaIcons {
   const YucaIcons._();
 
-  static const IconData House_01 = YucaIconsData(0xe9b0);
-  static const IconData User_03 = YucaIconsData(0xe9b1);
-  static const IconData Chat_Circle = YucaIconsData(0xe9b2);
-  static const IconData Book_Open = YucaIconsData(0xe9b3);
-  static const IconData Credit_Card_01 = YucaIconsData(0xe9b4);
+  static const IconData credit_card_01 = IconData(0xe9b0);
+  static const IconData house_01 = IconData(0xe9b1);
+  static const IconData user_03 = IconData(0xe9b4);
+  static const IconData chat_circle = IconData(0xe9b2);
+  static const IconData book_open = IconData(0xe9b3);
   static const IconData none = YucaIconsData(0xe900);
   static const IconData ic_360 = YucaIconsData(0xe901);
   static const IconData access = YucaIconsData(0xe902);
