@@ -15,6 +15,8 @@ class YucaButton extends StatelessWidget {
   final MainAxisAlignment? alignContent;
   final StyledButtonIconSide iconSide;
   final bool isPrimary;
+  final Color? buttonColor;
+  final Color? backgroundColor;
 
   const YucaButton({
     Key? key,
@@ -28,8 +30,9 @@ class YucaButton extends StatelessWidget {
     this.alignContent,
     this.iconSide = StyledButtonIconSide.right,
     this.isPrimary = true,
-  })  : assert(text != null || icon != null,
-            '\n[ERROR]: One of the text or icon param must be informed at least'),
+    this.buttonColor,
+    this.backgroundColor,
+  })  : assert(text != null || icon != null, '\n[ERROR]: One of the text or icon param must be informed at least'),
         super(key: key);
 
   @override
@@ -52,17 +55,13 @@ class YucaButton extends StatelessWidget {
           padding: icon != null && text == null
               ? const EdgeInsets.all(0) //Case only icon
               : icon == null
-                  ? const EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 24) // Case only Text
-                  : const EdgeInsets.symmetric(
-                      vertical: 10, horizontal: 24), // Case icon and text
+                  ? const EdgeInsets.symmetric(vertical: 10, horizontal: 24) // Case only Text
+                  : const EdgeInsets.symmetric(vertical: 10, horizontal: 24), // Case icon and text
           child: Row(
             mainAxisAlignment: alignContent ?? MainAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
-            children: iconSide == StyledButtonIconSide.right
-                ? itemsContent
-                : itemsContent.reversed.toList(),
+            children: iconSide == StyledButtonIconSide.right ? itemsContent : itemsContent.reversed.toList(),
           ),
         ),
         style: TextButton.styleFrom(
@@ -72,25 +71,22 @@ class YucaButton extends StatelessWidget {
                   Radius.circular(6),
                 ),
           ),
-          primary: isPrimary
-              ? YucaColorStyles.base0
-              : YucaColorStyles.brandPrimaryDark,
-          backgroundColor: isButtonLink
-              ? Colors.transparent
-              : !isEnabled && isPrimary == true
-                  ? YucaColorStyles.base20
-                  : !isEnabled && isPrimary == false
-                      ? YucaColorStyles.base0
-                      : isPrimary
-                          ? YucaColorStyles.brandPrimaryDark
-                          : YucaColorStyles.brandPrimaryLighten,
+          primary: buttonColor ?? (isPrimary ? YucaColorStyles.base0 : YucaColorStyles.brandPrimaryDark),
+          backgroundColor: backgroundColor ??
+              (isButtonLink
+                  ? Colors.transparent
+                  : !isEnabled && isPrimary == true
+                      ? YucaColorStyles.base20
+                      : !isEnabled && isPrimary == false
+                          ? YucaColorStyles.base0
+                          : isPrimary
+                              ? YucaColorStyles.brandPrimaryDark
+                              : YucaColorStyles.brandPrimaryLighten),
           textStyle: YucaTypography.create(
             YucaTextStyles.bodySmallBold,
             fontWeight: FontWeight.w600,
           ),
-          onSurface: !isEnabled && isPrimary == true
-              ? YucaColorStyles.base0
-              : YucaColorStyles.base20,
+          onSurface: !isEnabled && isPrimary == true ? YucaColorStyles.base0 : YucaColorStyles.base20,
         ),
       ),
     );
